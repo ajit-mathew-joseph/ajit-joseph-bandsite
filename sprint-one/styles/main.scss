@@ -1,0 +1,57 @@
+/* Partials Load-in */
+
+@use '../../sprint-one/styles/partials/fonts' as *;
+
+/* Navigation Bar */
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 45vh;
+    width: 100%;
+    margin: -1px;
+}
+
+.navBar {
+    height: 40%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #323232;
+}
+
+.navBar__title {
+    // border: 1px solid white;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-family: 'AvenirNextLTPro';
+    font-weight: 100;
+    margin: 10% 0% 0%;
+}
+
+.navBar__links {
+    border: 1px solid white;
+    color: #FFFFFF;
+    display: flex;
+}
+
+.navBar__link {
+    // border: 1px solid black;
+    margin: 0% 10% 0%;
+}
+
+.heroSection {
+    // border: 1px solid black;
+}
+
+.heroSection__title {
+    // border: 1px solid black;
+}

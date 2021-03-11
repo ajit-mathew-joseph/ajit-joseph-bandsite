@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 100;
+  font-style: normal;
+  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Bold.otf");
+}
+/* Partials Load-in */
+/* Navigation Bar */
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 45vh;
+  width: 100%;
+  margin: -1px;
+}
+
+.navBar {
+  height: 40%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #323232;
+}
+
+.navBar__title {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-family: "AvenirNextLTPro";
+  font-weight: 100;
+  margin: 10% 0% 0%;
+}
+
+.navBar__links {
+  border: 1px solid white;
+  color: #FFFFFF;
+  display: flex;
+}
+
+.navBar__link {
+  margin: 0% 10% 0%;
+}/*# sourceMappingURL=main.css.map */
