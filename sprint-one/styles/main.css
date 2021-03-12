@@ -2,6 +2,12 @@
   font-family: "AvenirNextLTPro";
   font-weight: 100;
   font-style: normal;
+  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Light.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 300;
+  font-style: normal;
   src: url("/assets/fonts/Linotype - AvenirNextLTPro-Regular.otf");
 }
 @font-face {
@@ -27,35 +33,133 @@ body {
 }
 
 .header {
-  height: 45vh;
+  height: 55vh;
   width: 100%;
-  margin: -1px;
 }
 
 .navBar {
-  height: 40%;
   border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 14vh;
   background-color: #323232;
 }
 
 .navBar__title {
-  color: #FFFFFF;
-  font-size: 1.8rem;
+  text-align: center;
+  font-size: 1.6rem;
   font-family: "AvenirNextLTPro";
-  font-weight: 100;
-  margin: 10% 0% 0%;
+  font-weight: 300;
+  margin: 0.9rem 0rem 0rem 0rem;
+  color: #FFFFFF;
 }
 
 .navBar__links {
-  border: 1px solid white;
-  color: #FFFFFF;
+  padding: 0%;
   display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  text-align: center;
+  margin: 0rem;
+  color: #FFFFFF;
 }
 
 .navBar__link {
-  margin: 0% 10% 0%;
+  font-family: "AvenirNextLTPro";
+  font-weight: 300;
+  width: 50%;
+  padding: 0.33rem 1rem;
+}
+
+.navBar__link--active {
+  border-bottom: 5px solid #FFFFFF;
+}
+
+.heroSection {
+  background-image: url("/assets/images/bandHeroImage.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  padding: 0.1%;
+  display: flex;
+  align-items: center;
+}
+
+.heroSection__title {
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  width: 65%;
+  color: #FFFFFF;
+  font-family: "AvenirNextLTPro";
+  font-size: 1.5rem;
+}
+
+.aboutSection {
+  height: 145vh;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  background-color: #FFFFFF;
+}
+
+.aboutSection__title {
+  color: #323232;
+  font-family: "AvenirNextLTPro";
+  font-size: 1.5rem;
+}
+
+.aboutSection__image {
+  width: 100%;
+}
+
+.aboutSection__quote {
+  font-family: "AvenirNextLTPro";
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.aboutSection__quote--source {
+  font-family: "AvenirNextLTPro";
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin: 0% 0% 15%;
+}
+
+.aboutSection__artistNames {
+  font-family: "AvenirNextLTPro";
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.aboutSection__bio {
+  font-family: "AvenirNextLTPro";
+  font-weight: 100;
+  font-size: 0.75rem;
+  width: 90.5%;
+}
+
+.photoGallery {
+  height: 297vh;
+  background-color: #f7f7f7;
+}
+
+.photoGallery__title {
+  padding: 1.25rem 1rem 0.25rem 1rem;
+  font-family: "AvenirNextLTPro";
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #323232;
+  margin: 15% 0% 2%;
+}
+
+.photoGallery__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photoGallery__image {
+  width: 90%;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+}
+
+.footer {
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  font-family: "AvenirNextLTPro";
+  background-color: #323232;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
