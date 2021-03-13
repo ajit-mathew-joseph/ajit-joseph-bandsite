@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    height: 55vh;
+    height: 45vh;
     width: 100%;
 }
 
@@ -23,13 +23,8 @@ body {
     background-color: #323232;
 }
 
-.navBar__title {
-    text-align: center;
-    font-size: 1.6rem;
-    font-family: 'AvenirNextLTPro';
-    font-weight: 300;
-    margin: 0.9rem 0rem 0rem 0rem;
-    color: #FFFFFF;
+.navBar__logo {
+    margin: 5% 30% 2%;
 }
 
 .navBar__links {
@@ -57,7 +52,7 @@ body {
     background-image: url('/assets/images/bandHeroImage.jpg'); // Photo by Rocco Dipoppa on Unsplash
     background-position: center;
     background-size: cover;
-    height: 40vh;
+    height: 30vh;
     padding: 0.1%;
     display: flex;
     align-items: center;
@@ -72,7 +67,7 @@ body {
 }
 
 .aboutSection {
-    height: 145vh;
+    height: 158vh;
     padding: 0.5rem 1rem 0.25rem 1rem;
     background-color: #FFFFFF;
 }
@@ -91,13 +86,14 @@ body {
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
     font-size: 1rem;
+    line-height: 1.3rem;
 }
 
 .aboutSection__quote--source {
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
     font-size: 0.85rem;
-    margin: 0% 0% 15%;
+    margin: 8% 0% 12%;
 }
 
 .aboutSection__artistNames {
@@ -109,7 +105,7 @@ body {
 .aboutSection__bio {
     font-family: 'AvenirNextLTPro';
     font-weight: 100;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     width: 90.5%;
 }
 
@@ -119,7 +115,7 @@ body {
 }
 
 .photoGallery__title {
-    padding: 1.25rem 1rem 0.25rem 1rem;
+    padding: 2rem 1rem 0.25rem 1rem;
     font-family: 'AvenirNextLTPro';
     font-weight: 700;
     font-size: 1.3rem;
@@ -141,4 +137,60 @@ body {
     font-family: 'AvenirNextLTPro';
     background-color: #323232;
     color: #FFFFFF;
+}
+
+.footer__title {
+    font-size: 2rem;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: 0% 0% 15%;
+}
+
+.contactInformation__name {
+    height: 0rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.contactInformation__agency {
+    height: 0rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.contactInformation__address {
+    margin: 12% 0% 0%;
+    font-size: 0.7rem;
+    font-weight: 100;
+    width: 50%;
+    line-height: 1rem;
+}
+
+.contactInformation__email {
+    font-size: 0.7rem;
+    font-weight: 100;
+    margin: 7% 0% 0%;
+}
+
+.contactInformation__area {
+    margin: 12% 0% 0%;
+    font-size: 0.65rem;
+    font-weight: 100;
+    width: 42%;
+    line-height: 1rem;
+}
+
+.copyright {
+    margin: 10% 0% 0%;
+    font-size: 0.65rem;
+    font-weight: 100;
+    line-height: 1rem;
+}
+
+.copyright__text {
+    margin: 0%;
 }
