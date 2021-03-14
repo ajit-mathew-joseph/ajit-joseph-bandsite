@@ -184,7 +184,7 @@ body {
 }
 @media (min-width: 1280px) {
   .aboutSection {
-    padding: 2rem 12rem 0rem 12rem;
+    padding: 1rem 12rem 0rem 12rem;
   }
 }
 
@@ -202,6 +202,7 @@ body {
 @media (min-width: 1280px) {
   .aboutSection__title {
     font-size: 2.5rem;
+    padding: 0rem 0rem 1rem;
   }
 }
 
@@ -279,12 +280,18 @@ body {
 @media (min-width: 1280px) {
   .aboutSection__artistNames {
     padding: 0rem 6.5rem;
+    margin: 0% 0% 2%;
   }
 }
 
 @media (min-width: 768px) {
   .aboutSection__bioSubSection {
     display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .aboutSection__bioSubSection {
+    padding: 0rem 6.5rem 0rem 6.5rem;
   }
 }
 
@@ -305,7 +312,7 @@ body {
 @media (min-width: 1280px) {
   .aboutSection__bio {
     width: 100%;
-    padding: 0rem 6.5rem;
+    margin: 0% 4% 0% 0%;
   }
 }
 
@@ -317,6 +324,11 @@ body {
 @media (min-width: 768px) {
   .photoGallery {
     padding: 0% 0% 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .photoGallery {
+    padding: 0rem 12rem 2rem 12rem;
   }
 }
 
@@ -356,6 +368,12 @@ body {
     padding: 0.5rem 0rem 0.25rem 1rem;
   }
 }
+@media (min-width: 1280px) {
+  .photoGallery__image {
+    width: 31%;
+    padding: 0.625rem 0rem 0.625rem 1.25rem;
+  }
+}
 
 /* Footer Section */
 .footer {
@@ -363,6 +381,11 @@ body {
   font-family: "AvenirNextLTPro";
   background-color: #323232;
   color: #FFFFFF;
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 0rem 12rem 0rem 12rem;
+  }
 }
 
 .footer__logo {
@@ -404,12 +427,23 @@ body {
     margin: 3% 15% 0% 0%;
   }
 }
+@media (min-width: 1280px) {
+  .footer__icons {
+    width: 10%;
+    margin: 3% 45% 0% 0%;
+  }
+}
 
 @media (min-width: 768px) {
   .contactInformation__section {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: flex-start;
+  }
+}
+@media (min-width: 1280px) {
+  .contactInformation__section {
+    justify-content: flex-start;
   }
 }
 
@@ -419,10 +453,22 @@ body {
     margin: 0% 7% 0% 0%;
   }
 }
+@media (min-width: 1280px) {
+  .contactInformation {
+    margin: 0% 8% 0% 0%;
+    width: 20%;
+  }
+}
 
 @media (min-width: 768px) {
   .contactInformation:nth-child(3) {
     margin: 0%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contactInformation:nth-child(2) {
+    margin: 0% 3% 0% 0%;
   }
 }
 
@@ -492,6 +538,12 @@ body {
 @media (min-width: 768px) {
   .copyright {
     display: flex;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  .copyright {
+    margin: 3% 0% 0%;
   }
 }
 

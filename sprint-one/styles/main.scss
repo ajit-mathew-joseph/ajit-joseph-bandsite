@@ -171,7 +171,7 @@ body {
     background-color: #FFFFFF;
 
     @include desktop() {
-        padding: 2rem 12rem 0rem 12rem;
+        padding: 1rem 12rem 0rem 12rem;
     }
 }
 
@@ -187,6 +187,7 @@ body {
 
     @include desktop() {
         font-size: 2.5rem;
+        padding: 0rem 0rem 1rem;
     }
 }
 
@@ -257,12 +258,17 @@ body {
 
     @include desktop() {
         padding: 0rem 6.5rem;
+        margin: 0% 0% 2%;
     }
 }
 
 .aboutSection__bioSubSection {
     @include tablet() {
     display: flex;
+    }
+
+    @include desktop() {
+        padding: 0rem 6.5rem 0rem 6.5rem;
     }
 }
 
@@ -281,7 +287,7 @@ body {
 
     @include desktop() {
         width: 100%;
-        padding: 0rem 6.5rem;
+        margin: 0% 4% 0% 0%;
     }
 }
 
@@ -293,6 +299,10 @@ body {
 
     @include tablet() {
         padding: 0% 0% 5%;
+    }
+
+    @include desktop() {
+        padding: 0rem 12rem 2rem 12rem;
     }
 }
 
@@ -327,6 +337,11 @@ body {
     width: 30%;
     padding: 0.5rem 0rem 0.25rem 1rem;
     }
+
+    @include desktop() {
+        width: 31%;
+        padding: 0.625rem 0rem 0.625rem 1.25rem;
+        }
 }
 
 /* Footer Section */
@@ -336,6 +351,10 @@ body {
     font-family: 'AvenirNextLTPro';
     background-color: #323232;
     color: #FFFFFF;
+
+    @include desktop() {
+        padding: 0rem 12rem 0rem 12rem;
+    }
 }
 
 .footer__logo {
@@ -371,14 +390,23 @@ body {
         width: 20%;
         margin: 3% 15% 0% 0%;
     }
+
+    @include desktop() {
+        width: 10%;
+        margin: 3% 45% 0% 0%;
+    }
 }
 
 .contactInformation__section {
     @include tablet() {
         display: flex;
         // max-height: 300px;
-        justify-content: space-between;
+        justify-content: left;
         align-items: flex-start;
+    }
+
+    @include desktop() {
+        justify-content: flex-start;
     }
 }
 
@@ -388,11 +416,22 @@ body {
         width: 30%;
         margin: 0% 7% 0% 0%;
     }
+
+    @include desktop() {
+        margin: 0% 8% 0% 0%;
+        width: 20%;
+    }
 }
 
 .contactInformation:nth-child(3) {
     @include tablet() {
         margin: 0%;
+    }
+}
+
+.contactInformation:nth-child(2) {
+    @include desktop() {
+        margin: 0% 3% 0% 0%;
     }
 }
 
@@ -452,6 +491,11 @@ body {
     line-height: 1rem;
     @include tablet() {
         display: flex;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+
+    @include desktop() {
+        margin: 3% 0% 0%;
     }
 }
 
