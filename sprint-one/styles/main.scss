@@ -2,6 +2,26 @@
 
 @use '../../sprint-one/styles/partials/fonts' as *;
 
+/* Media Queries */ 
+
+@mixin mobile {
+    @media (min-width: 320px) {
+       @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
 /* Navigation Bar */
 
 ul {
@@ -13,124 +33,303 @@ body {
 }
 
 .header {
-    height: 45vh;
-    width: 100%;
+    width: 100%
 }
 
 .navBar {
-    border: 1px solid black;
-    height: 14vh;
     background-color: #323232;
+    display: flex;
+    @include mobile() {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    @include tablet() {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 2rem;
+    }
+
+    @include desktop() {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 12rem;
+    }
 }
 
 .navBar__logo {
-    margin: 5% 30% 2%;
+    
+    @include mobile() {
+        margin: 5% 0% 2%;
+        width: 35%;
+    }
+    @include tablet() {
+        margin: 2% 5% 2% 0%;
+        width: 15%;
+    }
+
+    @include desktop() {
+        width: 11%;
+    }
 }
 
 .navBar__links {
-    padding: 0%;
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-end;
-    text-align: center;
-    margin: 0rem;
-    color: #FFFFFF;
+    @include mobile() {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        padding: 0%;
+        margin: 1% 0% 0%;
+        color: #FFFFFF;
+    }
+
+    @include tablet() {
+        width: 35%;
+        margin: 2% 0% 0%;
+    }
+
+    @include desktop() {
+        margin: 1% 0% 0%;
+        width: 20%;
+    }
+
 }
 
 .navBar__link {
-    font-family: 'AvenirNextLTPro';
-    font-weight: 300;
-    width: 50%;
-    padding: 0.33rem 1rem;
+    @include mobile() {
+        width: 50%;
+        font-family: 'AvenirNextLTPro';
+        font-weight: 300;
+        padding: 0.33rem 1rem;
+    }
+
+    @include tablet() {
+        width: 100%;
+        padding: 1.5rem 0rem;
+        margin: 0% 10% 0%;
+    }
+
+    @include desktop() {
+        width: 100%;
+        padding: 1.5rem 0rem;
+        margin: 0% 15% 0%;
+    }
 }
 
 .navBar__link--active {
     border-bottom: 5px solid #FFFFFF;
 }
 
+/* Hero Section */ 
+
 .heroSection {
     background-image: url('/assets/images/bandHeroImage.jpg'); // Photo by Rocco Dipoppa on Unsplash
     background-position: center;
     background-size: cover;
-    height: 30vh;
-    padding: 0.1%;
+    height: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
+
+    @include tablet() {
+        height: 500px;
+    }
+
+    @include desktop() {
+        height: 650px;
+        align-items: flex-start;
+    }
 }
 
 .heroSection__title {
     padding: 0.5rem 1rem 0.25rem 1rem;
-    width: 65%;
+    width: 70%;
     color: #FFFFFF;
     font-family: 'AvenirNextLTPro';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+
+    @include tablet() {
+        font-size: 4rem;
+    }
+
+    @include desktop() {
+        padding: 0rem 12rem 0rem 12rem;
+        width: 45%;
+        margin: 16% 0% 0%;
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
 }
 
+/* About Section */ 
+
 .aboutSection {
-    height: 158vh;
     padding: 0.5rem 1rem 0.25rem 1rem;
     background-color: #FFFFFF;
+
+    @include desktop() {
+        padding: 2rem 12rem 0rem 12rem;
+    }
 }
 
 .aboutSection__title {
     color: #323232;
     font-family: 'AvenirNextLTPro';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+
+    @include tablet() {
+        padding: 0rem 0.5rem;
+        font-size: 2rem;
+    }
+
+    @include desktop() {
+        font-size: 2.5rem;
+    }
 }
 
 .aboutSection__image {
     width: 100%;
+    @include tablet() {
+        height: auto;
+    }
+
+    @include desktop() {
+        width: 80%;
+        padding: 0rem 0rem 0rem 6.5rem;
+    }
+    
 }
 
 .aboutSection__quote {
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
+    width: 85%;
     font-size: 1rem;
-    line-height: 1.3rem;
+    color: #323232;
+    
+
+    @include tablet() {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
+    @include desktop() {
+        padding: 1rem 6.5rem;
+        width: 80%;
+        font-size: 1.6rem;
+    }
 }
 
 .aboutSection__quote--source {
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     margin: 8% 0% 12%;
+    color: #323232;
+
+    @include tablet() {
+        font-size: 1.1rem;
+        margin: 5% 0% 7%;
+    }
+
+    @include desktop() {
+        font-size: 1.1rem;
+        margin: 0% 0% 5%;
+        padding: 0rem 6.5rem;
+    }
 }
 
 .aboutSection__artistNames {
     font-family: 'AvenirNextLTPro';
-    font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
+
+    @include tablet() {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #323232;
+        margin: 0% 0% 3%;
+    }
+
+    @include desktop() {
+        padding: 0rem 6.5rem;
+    }
+}
+
+.aboutSection__bioSubSection {
+    @include tablet() {
+    display: flex;
+    }
 }
 
 .aboutSection__bio {
     font-family: 'AvenirNextLTPro';
     font-weight: 100;
-    font-size: 0.8rem;
-    width: 90.5%;
+    font-size: 0.95rem;
+    width: 100%;
+
+    @include tablet() {
+        width: 47%;
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+        margin: 0% 2% 0% 0%;
+    }
+
+    @include desktop() {
+        width: 100%;
+        padding: 0rem 6.5rem;
+    }
 }
 
+/* Photo Gallery */ 
+
 .photoGallery {
-    height: 297vh;
     background-color: #f7f7f7;
+    padding: 0% 0% 7%;
+
+    @include tablet() {
+        padding: 0% 0% 5%;
+    }
 }
 
 .photoGallery__title {
     padding: 2rem 1rem 0.25rem 1rem;
     font-family: 'AvenirNextLTPro';
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: #323232;
-    margin: 15% 0% 2%;
+    margin: 7% 0% 2%;
+
+    @include tablet() {
+        margin: 5% 0% 2%;
+        padding: 3rem 1rem 2rem 1rem;
+        font-size: 2.4rem;
+    }
 }
 
 .photoGallery__grid {
     display: flex;
     flex-wrap: wrap;
+
+    @include tablet() {
+        flex-direction: row;
+    }
 }
 .photoGallery__image {
     width: 90%;
-    padding: 0.5rem 1rem 0.25rem 1rem
+    padding: 0.5rem 1rem 0.25rem 1rem;
+
+    @include tablet() {
+    width: 30%;
+    padding: 0.5rem 0rem 0.25rem 1rem;
+    }
 }
+
+/* Footer Section */
 
 .footer {
     padding: 0.5rem 1rem 0.25rem 1rem;
@@ -139,27 +338,81 @@ body {
     color: #FFFFFF;
 }
 
+.footer__logo {
+    display: none;
+    @include tablet() {
+        display: inline-block;
+        margin: 3% 0% 0%;
+    }
+}
+
+.footer__box {
+    @include tablet() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+}
+
 .footer__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    @include tablet() {
+        margin: 5% 0% 2%;
+    }
 }
 
 .footer__icons {
     display: flex;
     justify-content: space-between;
     width: 45%;
-    margin: 0% 0% 15%;
+    margin: 3% 0% 15%;
+
+    @include tablet() {
+        width: 20%;
+        margin: 3% 15% 0% 0%;
+    }
+}
+
+.contactInformation__section {
+    @include tablet() {
+        display: flex;
+        // max-height: 300px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.contactInformation {
+    @include tablet() {
+        // height: 100px;
+        width: 30%;
+        margin: 0% 7% 0% 0%;
+    }
+}
+
+.contactInformation:nth-child(3) {
+    @include tablet() {
+        margin: 0%;
+    }
 }
 
 .contactInformation__name {
     height: 0rem;
     font-size: 0.85rem;
     font-weight: 300;
+    @include tablet() {
+        font-size: 0.95rem;
+    }
 }
 
 .contactInformation__agency {
     height: 0rem;
     font-size: 0.85rem;
     font-weight: 300;
+    @include tablet() {
+        font-size: 0.95rem;
+        margin: 0% 0% 15%
+    }
 }
 
 .contactInformation__address {
@@ -168,6 +421,10 @@ body {
     font-weight: 100;
     width: 50%;
     line-height: 1rem;
+    @include tablet {
+        width: 80%;
+        font-size: 0.8rem;
+    }
 }
 
 .contactInformation__email {
@@ -182,6 +439,10 @@ body {
     font-weight: 100;
     width: 42%;
     line-height: 1rem;
+    @include tablet() {
+        font-size: 0.8rem;
+        width: 70%;
+    }
 }
 
 .copyright {
@@ -189,8 +450,11 @@ body {
     font-size: 0.65rem;
     font-weight: 100;
     line-height: 1rem;
+    @include tablet() {
+        display: flex;
+    }
 }
 
 .copyright__text {
-    margin: 0%;
+    margin: 0% 1% 0% 0%;
 }
