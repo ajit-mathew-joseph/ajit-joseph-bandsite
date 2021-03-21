@@ -141,7 +141,7 @@ body {
     flex-direction: column;
 
     @include tablet() {
-        height: 450px;
+        height: 675px;
     }
 
     @include desktop() {
@@ -154,9 +154,15 @@ body {
         width: 90%;
         color: $textColor2;
         font-family: 'AvenirNextLTPro';
-        font-size: 0.75rem;
+        font-size: $smallFont2;
         font-weight: 300;
         margin: 10% 0% 0%;
+
+        @include tablet() {
+            font-size: $medFont3;
+            font-weight: 500;
+            margin: 10% 0% 3%;
+        }
     }
 
     &__title {
@@ -170,6 +176,7 @@ body {
 
         @include tablet() {
             font-size: $lgFont2;
+            width: 80%;
         }
 
         @include desktop() {
@@ -184,6 +191,14 @@ body {
         padding: $mobileBreakpoint;
         border-radius: 20px;
         margin: 10% 0% 0%;
+
+        @include tablet() {
+            padding: $tabletBreakpoint;
+            width: 55%;
+            height: 150px;
+            margin: 5% 0% 0%;
+        }
+        
     }
 
     &__player--box {
@@ -212,7 +227,12 @@ body {
     &__title {
         font-weight: 700;
         font-size: $medFont3;
-        margin: 10% 0% 7.5%;    
+        margin: 10% 0% 7.5%;
+        
+        @include tablet() {
+            margin: 5% 0% 1%;
+            font-size: $lgFont1;
+        }
     }
 
     &__container {
@@ -220,42 +240,91 @@ body {
         border-bottom: 2px solid #E1E1E1;
         padding-bottom: 1rem;
         margin: 0% 0% 5%;
+
+        @include tablet() {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__container--alternate {
+        display: none;
+
+        @include tablet() {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__empty-container {
+        @include tablet() {
+            margin: 0%;
+            width: 35%;
+        }   
     }
 
     &__container:nth-last-child(1) {
         margin: 0% 0% 12%;
+
+        @include tablet() {
+            margin: 0% 0% 5%;
+        }
     }
 
     &__date--title {
         color: #AFAFAF;
         margin: 4% 0%;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 35%;
+        }
     }
 
     &__date {
         font-size: $medFont1;
-        
     }
 
     &__venue--title {
         font-size: $smallFont4;
         color: #AFAFAF;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 25%;
+        }
     }
 
     &__venue {
         font-size: $smallFont3;
         font-weight: 100;
         margin: 2% 0% 7%;
+        
+        @include tablet() {
+            margin: 2% 0% 2%;
+        }
     }
 
     &__location--title {
         font-size: $smallFont4;
         color: #AFAFAF;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 25%;
+        }
     }
 
     &__location {
         font-size: $smallFont3;
         font-weight: 100;
         margin: 2% 0% 7%;
+
+        @include tablet() {
+            margin: 2% 0% 2%;
+        }
     }
 
     &__button {
@@ -266,6 +335,16 @@ body {
         border: none;
         height: 50px;
         font-weight: 700;
+
+        @include tablet() {
+            width: 25%;
+        }
+    }
+
+    &__hidden {
+        @include tablet() {
+            display: none;
+        }
     }
 }
 

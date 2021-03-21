@@ -20,8 +20,8 @@ Most elements styled as follows:
 
 /* Partials Load-in */
 
-@use '../../sprint-one/styles/partials/fonts' as *;
-@use '../../sprint-one/styles/partials/variables' as *;
+@use '../../sprint-two/styles/partials/fonts' as *;
+@use '../../sprint-two/styles/partials/variables' as *;
 
 /* Media Queries */ 
 
@@ -353,18 +353,35 @@ body {
     padding: $mobileBreakpoint;
     font-family: 'AvenirNextLTPro';
 
+    @include tablet() {
+        padding: $tabletBreakpoint;
+    }
+
     &__title {
         color: $textColor1;
+
+        @include tablet() {
+            font-size: $lgFont1;
+            margin: 5% 0% 0%;
+        }
     }
 
     &__form {
         display: flex;
         margin: 2% 0% 15%;
+        @include tablet() {
+            padding: $tabletSubSectionBreak;
+            margin: 2% 0% 3%;
+        }
     }
 
     &__form--image-container {
         width: 30%;
         margin: 3.75% 0% 0%;
+
+        @include tablet() {
+            width: 15%;
+        }
     }
 
     &__form--icon {
@@ -372,10 +389,18 @@ body {
         width: 55px;
         height: 55px;
         border-radius: 50%;
+
+        @include tablet() {
+            margin: 35% 0% 0%;
+        }
     }
 
     &__form--text-container {
         margin: 5% 0% 0%;
+
+        @include tablet() {
+            width: 85%;
+        }
     }
 
     &__form--name-title {
@@ -406,6 +431,10 @@ body {
         font-size: $smallFont3;
         color: #AFAFAF;
         margin: 10% 0% 2%;
+
+        @include tablet() {
+            margin: 5% 0% 0%;
+        }
     }
 
     &__form--comment-input {
@@ -429,6 +458,18 @@ body {
         border: none;
         height: 50px;
         font-weight: 700;
+
+        @include tablet() {
+            width: 35%;
+            margin: 0% 0% 0% 58%;
+        }
+    }
+
+    &__sub-section {
+        @include tablet() {
+            padding: $tabletSubSectionBreak;
+            width: 75%;
+        }
     }
 
     &__container {
@@ -439,12 +480,20 @@ body {
     &__container:nth-last-child(1) {
         border-bottom: 2px solid #E1E1E1;
         margin-bottom: 15%;
-    }
 
+        @include tablet() {
+            margin-bottom: 7%;
+        }
+    }
 
     &__icon-container {
         margin: 10% 0% 0%;
         width: 22%;
+
+        @include tablet() {
+            width: 12%;
+            margin: 5% 0% 0%;
+        }
     }
 
     &__text-container {
@@ -452,6 +501,10 @@ body {
         display: flex;
         flex-direction: column;
         margin: 8% 0% 0%;
+
+        @include tablet() {
+            margin: 3% 0% 0%;
+        }
     }
 
     &__date-container {
@@ -459,6 +512,10 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        @include tablet() {
+            justify-content: flex-start;
+        }
     }
 
     &__icon {
@@ -466,6 +523,12 @@ body {
         width: 50px;
         height: 50px;
         border-radius: 50%;
+    }
+
+    &__name {
+        @include tablet() {
+            margin: 0% 3% 0% 0%;
+        }   
     }
 
     &__date {
@@ -478,6 +541,11 @@ body {
         margin: 0% 0% 8%;
         font-weight: 300;
         font-size: $smallFont3;
+
+        @include tablet() {
+            margin: 0% 0% 5%;
+            font-size: $smallFont4;
+        }
     }
 }
 
