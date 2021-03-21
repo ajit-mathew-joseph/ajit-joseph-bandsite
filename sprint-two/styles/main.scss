@@ -357,6 +357,10 @@ body {
         padding: $tabletBreakpoint;
     }
 
+    @include desktop() {
+        padding: $desktopBreakpoint;
+    }
+
     &__title {
         color: $textColor1;
 
@@ -372,6 +376,12 @@ body {
         @include tablet() {
             padding: $tabletSubSectionBreak;
             margin: 2% 0% 3%;
+        }
+
+        @include tablet() {
+            padding: $desktopSubSectionBreakTwo;
+            width: 60%;
+
         }
     }
 
@@ -444,10 +454,12 @@ body {
         border: 1px solid #E1E1E1;
         padding: 1rem 0rem 0rem 1rem;
         margin: 0%;
-        font-size: $medFont1;
+        font-size: $smallFont4;
         color: $textColor1;
         background-color: #FAFAFA;
         margin: 1% 0% 5%;
+        font-family: 'AvenirNextLTPro';
+        font-weight: 300;
     }
 
     &__form--button {
@@ -469,6 +481,11 @@ body {
         @include tablet() {
             padding: $tabletSubSectionBreak;
             width: 75%;
+        }
+
+        @include desktop() {
+            padding: $desktopSubSectionBreakTwo;
+            width: 58%;
         }
     }
 

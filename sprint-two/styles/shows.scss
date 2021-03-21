@@ -163,6 +163,20 @@ body {
             font-weight: 500;
             margin: 10% 0% 3%;
         }
+
+        @include desktop() {
+            padding: $desktopBreakpoint;
+            box-sizing: border-box;
+        }
+    }
+
+    &__sub-section {
+        @include desktop() {
+            display: flex;
+            padding: $desktopBreakpoint;
+            margin: 0%;
+            justify-content: space-between;
+        }
     }
 
     &__title {
@@ -180,10 +194,17 @@ body {
         }
 
         @include desktop() {
-            padding: $desktopBreakpoint;
-            width: 45%;
-            margin: 16% 0% 0%;
+            font-size: 3.5rem;
             line-height: 5.5rem;
+            padding: 0rem;
+            width: 100%;
+        }
+    }
+
+    &__player-section {
+        @include desktop() {
+            width: 70%;
+            margin: 10% 0% 0%;
         }
     }
 
@@ -194,9 +215,16 @@ body {
 
         @include tablet() {
             padding: $tabletBreakpoint;
-            width: 55%;
+            width: 70%;
             height: 150px;
             margin: 5% 0% 0%;
+        }
+
+        @include desktop() {
+            padding: 0%;
+            margin: 0% 0% 0% 10%;
+            width: 100%;
+            border-radius: 5px;
         }
         
     }
@@ -224,6 +252,12 @@ body {
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
 
+    @include desktop() {
+        padding: $desktopBreakpoint;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     &__title {
         font-weight: 700;
         font-size: $medFont3;
@@ -245,6 +279,13 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+    }
+
+    &__listing-section {
+        @include desktop() {
+            width: 70%;
+            margin: 2% 0% 0%;
         }
     }
 

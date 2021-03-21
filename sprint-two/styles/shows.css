@@ -185,6 +185,20 @@ body {
     margin: 10% 0% 3%;
   }
 }
+@media (min-width: 1280px) {
+  .hero-section__description {
+    padding: 0rem 12rem 0rem 12rem;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-section__sub-section {
+    display: flex;
+    padding: 0rem 12rem 0rem 12rem;
+    margin: 0%;
+    justify-content: space-between;
+  }
+}
 .hero-section__title {
   padding: 0.5rem 1rem 0.25rem 1rem;
   width: 90%;
@@ -201,10 +215,16 @@ body {
 }
 @media (min-width: 1280px) {
   .hero-section__title {
-    padding: 0rem 12rem 0rem 12rem;
-    width: 45%;
-    margin: 16% 0% 0%;
+    font-size: 3.5rem;
     line-height: 5.5rem;
+    padding: 0rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-section__player-section {
+    width: 70%;
+    margin: 10% 0% 0%;
   }
 }
 .hero-section__player {
@@ -215,9 +235,17 @@ body {
 @media (min-width: 768px) {
   .hero-section__player {
     padding: 0.5rem 1.2rem 0.25rem 1.2rem;
-    width: 55%;
+    width: 70%;
     height: 150px;
     margin: 5% 0% 0%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-section__player {
+    padding: 0%;
+    margin: 0% 0% 0% 10%;
+    width: 100%;
+    border-radius: 5px;
   }
 }
 .hero-section__player--box {
@@ -241,6 +269,13 @@ body {
   font-family: "AvenirNextLTPro";
   font-weight: 500;
 }
+@media (min-width: 1280px) {
+  .shows-section {
+    padding: 0rem 12rem 0rem 12rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .shows-section__title {
   font-weight: 700;
   font-size: 1.6rem;
@@ -263,6 +298,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-section__listing-section {
+    width: 70%;
+    margin: 2% 0% 0%;
   }
 }
 .shows-section__container--alternate {
