@@ -347,6 +347,140 @@ body {
     }
 }
 
+/* Comment Section */
+
+.comment-section {
+    padding: $mobileBreakpoint;
+    font-family: 'AvenirNextLTPro';
+
+    &__title {
+        color: $textColor1;
+    }
+
+    &__form {
+        display: flex;
+        margin: 2% 0% 15%;
+    }
+
+    &__form--image-container {
+        width: 30%;
+        margin: 3.75% 0% 0%;
+    }
+
+    &__form--icon {
+        margin: 27.5% 0% 0%;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+    }
+
+    &__form--text-container {
+        margin: 5% 0% 0%;
+    }
+
+    &__form--name-title {
+        font-weight: 500;
+        font-size: $smallFont3;
+        color: #AFAFAF;
+        margin: 0% 0% 2%;
+    }
+
+    ::placeholder {
+        color: $textColor1;
+    }
+
+    &__form--name-input {
+        width: 90%;
+        height: 45px;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 0rem 0rem 0rem 1rem;
+        margin: 0%;
+        font-size: $smallFont4;
+        color: $textColor1;
+        background-color: #FAFAFA;
+    }
+
+    &__form--comment-title {
+        font-weight: 500;
+        font-size: $smallFont3;
+        color: #AFAFAF;
+        margin: 10% 0% 2%;
+    }
+
+    &__form--comment-input {
+        width: 90%;
+        height: 75px;
+        border-radius: 5px;
+        border: 1px solid #E1E1E1;
+        padding: 1rem 0rem 0rem 1rem;
+        margin: 0%;
+        font-size: $medFont1;
+        color: $textColor1;
+        background-color: #FAFAFA;
+        margin: 1% 0% 5%;
+    }
+
+    &__form--button {
+        background-color: $backgroundColor1;
+        color: #FFFFFF;
+        border-radius: 5px;
+        width: 100%;
+        border: none;
+        height: 50px;
+        font-weight: 700;
+    }
+
+    &__container {
+        border-top: 2px solid #E1E1E1;
+        display: flex;
+    }
+
+    &__container:nth-last-child(1) {
+        border-bottom: 2px solid #E1E1E1;
+        margin-bottom: 15%;
+    }
+
+
+    &__icon-container {
+        margin: 10% 0% 0%;
+        width: 22%;
+    }
+
+    &__text-container {
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        margin: 8% 0% 0%;
+    }
+
+    &__date-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        background-color: #F1F1F1;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    &__date {
+        font-weight: 300;
+        color: #AFAFAF;
+        font-size: $smallFont4;
+    }
+
+    &__comment {
+        margin: 0% 0% 8%;
+        font-weight: 300;
+        font-size: $smallFont3;
+    }
+}
+
 /* Footer Section */
 
 .footer {

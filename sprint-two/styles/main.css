@@ -375,6 +375,125 @@ body {
   }
 }
 
+/* Comment Section */
+.comment-section {
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  font-family: "AvenirNextLTPro";
+}
+.comment-section__title {
+  color: #323232;
+}
+.comment-section__form {
+  display: flex;
+  margin: 2% 0% 15%;
+}
+.comment-section__form--image-container {
+  width: 30%;
+  margin: 3.75% 0% 0%;
+}
+.comment-section__form--icon {
+  margin: 27.5% 0% 0%;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.comment-section__form--text-container {
+  margin: 5% 0% 0%;
+}
+.comment-section__form--name-title {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #AFAFAF;
+  margin: 0% 0% 2%;
+}
+.comment-section ::-moz-placeholder {
+  color: #323232;
+}
+.comment-section :-ms-input-placeholder {
+  color: #323232;
+}
+.comment-section ::placeholder {
+  color: #323232;
+}
+.comment-section__form--name-input {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 0rem 0rem 0rem 1rem;
+  margin: 0%;
+  font-size: 0.95rem;
+  color: #323232;
+  background-color: #FAFAFA;
+}
+.comment-section__form--comment-title {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #AFAFAF;
+  margin: 10% 0% 2%;
+}
+.comment-section__form--comment-input {
+  width: 90%;
+  height: 75px;
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  padding: 1rem 0rem 0rem 1rem;
+  margin: 0%;
+  font-size: 1.1rem;
+  color: #323232;
+  background-color: #FAFAFA;
+  margin: 1% 0% 5%;
+}
+.comment-section__form--button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  height: 50px;
+  font-weight: 700;
+}
+.comment-section__container {
+  border-top: 2px solid #E1E1E1;
+  display: flex;
+}
+.comment-section__container:nth-last-child(1) {
+  border-bottom: 2px solid #E1E1E1;
+  margin-bottom: 15%;
+}
+.comment-section__icon-container {
+  margin: 10% 0% 0%;
+  width: 22%;
+}
+.comment-section__text-container {
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+  margin: 8% 0% 0%;
+}
+.comment-section__date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-section__icon {
+  background-color: #F1F1F1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.comment-section__date {
+  font-weight: 300;
+  color: #AFAFAF;
+  font-size: 0.95rem;
+}
+.comment-section__comment {
+  margin: 0% 0% 8%;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
 /* Footer Section */
 .footer {
   padding: 0.5rem 1rem 0.25rem 1rem;

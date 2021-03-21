@@ -135,7 +135,7 @@ body {
     background-image: url('/assets/images/bandHeroImage.jpg'); // Photo by Rocco Dipoppa on Unsplash
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 410px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -182,6 +182,90 @@ body {
 
     &__player {
         padding: $mobileBreakpoint;
+        border-radius: 20px;
+        margin: 10% 0% 0%;
+    }
+
+    &__player--box {
+        font-size: 10px; 
+        color: #cccccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+        font-weight: 100;
+    }
+}
+
+/* Shows Section */ 
+
+.shows-section {
+    background-color: $backgroundColor2;
+    display: flex;
+    flex-direction: column;
+    padding: $mobileBreakpoint;
+    font-family: 'AvenirNextLTPro';
+    font-weight: 500;
+
+    &__title {
+        font-weight: 700;
+        font-size: $medFont3;
+        margin: 10% 0% 7.5%;    
+    }
+
+    &__container {
+        font-size: $smallFont4;
+        border-bottom: 2px solid #E1E1E1;
+        padding-bottom: 1rem;
+        margin: 0% 0% 5%;
+    }
+
+    &__container:nth-last-child(1) {
+        margin: 0% 0% 12%;
+    }
+
+    &__date--title {
+        color: #AFAFAF;
+        margin: 4% 0%;
+    }
+
+    &__date {
+        font-size: $medFont1;
+        
+    }
+
+    &__venue--title {
+        font-size: $smallFont4;
+        color: #AFAFAF;
+    }
+
+    &__venue {
+        font-size: $smallFont3;
+        font-weight: 100;
+        margin: 2% 0% 7%;
+    }
+
+    &__location--title {
+        font-size: $smallFont4;
+        color: #AFAFAF;
+    }
+
+    &__location {
+        font-size: $smallFont3;
+        font-weight: 100;
+        margin: 2% 0% 7%;
+    }
+
+    &__button {
+        background-color: $backgroundColor1;
+        color: #FFFFFF;
+        border-radius: 5px;
+        width: 100%;
+        border: none;
+        height: 50px;
+        font-weight: 700;
     }
 }
 
