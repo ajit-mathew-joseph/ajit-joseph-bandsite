@@ -1,20 +1,6 @@
 /* General Notes 
 
-Checked for Responsiveness using Google Chrome Toogle Device Toolbar (Ctrl + Shift + M):
-
-Breakpoints: 
-
-1. 320px (Mobile) (Also the default size for anything below 320px and up to 767px)
-2. 768px (Tablet)
-3. 1280px (Desktop)
-
-All Variables can be found in _variables.scss with their respective info
-
-Most elements styled as follows:
-
-1. % for Margins and Width
-2. Rem for Font-sizes and Padding
-3. Px for Images and certain elements that are static
+Feedback from Sprint 1 not fully incorporated due to time constraint -- will be formatted in for Sprint 3!!
 
 */
 
@@ -22,17 +8,18 @@ Most elements styled as follows:
 
 @use '../../sprint-two/styles/partials/fonts' as *;
 @use '../../sprint-two/styles/partials/variables' as *;
+@use '../../sprint-two/styles/partials/mixins' as *;
 
 /* Media Queries */ 
 
 @mixin tablet {
-    @media (min-width: 768px) {
+    @media (min-width: $tabletBreakPoint) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: 1280px) {
+    @media (min-width: $desktopBreakPoint) {
         @content;
     }
 }
@@ -69,7 +56,7 @@ body {
 
     @include desktop() {
         align-items: center;
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
     }
 
     &__logo {
@@ -150,7 +137,7 @@ body {
     }
 
     &__title {
-        padding: $mobileBreakpoint;
+        padding: $mobilePadding;
         width: 70%;
         color: $textColor2;
         font-family: 'AvenirNextLTPro';
@@ -161,7 +148,7 @@ body {
         }
 
         @include desktop() {
-            padding: $desktopBreakpoint;
+            padding: $desktopPadding;
             width: 45%;
             margin: 16% 0% 0%;
             line-height: 5.5rem;
@@ -172,11 +159,11 @@ body {
 /* About Section */ 
 
 .about-section {
-    padding: $mobileBreakpoint;
+    padding: $mobilePadding;
     background-color: $backgroundColor2;
 
     @include tablet() {
-        padding: $tabletBreakpoint;
+        padding: $tabletPadding;
     }
 
     @include desktop() {
@@ -191,7 +178,7 @@ body {
 
         @include tablet() {
             padding: 0rem 0.5rem;
-            font-size: 2rem;
+            font-size: $lgFont3;
         }
 
         @include desktop() {
@@ -205,7 +192,7 @@ body {
 
         @include desktop() {
             width: 80%;
-            padding: $desktopSubSectionBreak;
+            padding: $desktopSubSectionPadding;
         } 
     }
 
@@ -244,7 +231,7 @@ body {
 
         @include desktop() {
             margin: 0% 0% 5%;
-            padding: $desktopSubSectionBreak;
+            padding: $desktopSubSectionPadding;
         }   
     }
 
@@ -260,7 +247,7 @@ body {
         }
 
         @include desktop() {
-            padding: $desktopSubSectionBreak;
+            padding: $desktopSubSectionPadding;
             margin: 0% 0% 2%;
         }
     }
@@ -272,7 +259,7 @@ body {
 
         @include desktop() {
             width: 85%;
-            padding: $desktopSubSectionBreak;
+            padding: $desktopSubSectionPadding;
         }
     }
 
@@ -334,7 +321,7 @@ body {
 
     &__image {
         width: 90%;
-        padding: $mobileBreakpoint;
+        padding: $mobilePadding;
 
         @include tablet() {
             width: 30%;
@@ -350,15 +337,15 @@ body {
 /* Comment Section */
 
 .comment-section {
-    padding: $mobileBreakpoint;
+    padding: $mobilePadding;
     font-family: 'AvenirNextLTPro';
 
     @include tablet() {
-        padding: $tabletBreakpoint;
+        padding: $tabletPadding;
     }
 
     @include desktop() {
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
     }
 
     &__title {
@@ -374,12 +361,12 @@ body {
         display: flex;
         margin: 2% 0% 15%;
         @include tablet() {
-            padding: $tabletSubSectionBreak;
+            padding: $tabletSubSectionPadding;
             margin: 2% 0% 3%;
         }
 
         @include desktop() {
-            padding: $desktopSubSectionBreakTwo;
+            padding: $desktopSubSectionPaddingTwo;
             width: 60%;
 
         }
@@ -416,7 +403,7 @@ body {
     &__form--name-title {
         font-weight: 500;
         font-size: $smallFont3;
-        color: #AFAFAF;
+        color: $textColor3;
         margin: 0% 0% 2%;
     }
 
@@ -428,12 +415,12 @@ body {
         width: 90%;
         height: 45px;
         border-radius: 5px;
-        border: 1px solid #E1E1E1;
+        border: 1px solid $elementColor3;
         padding: 0rem 0rem 0rem 1rem;
         margin: 0%;
         font-size: $smallFont4;
         color: $textColor1;
-        background-color: #FAFAFA;
+        background-color: $backgroundColor3;
     }
 
     &__form--name-input:focus {
@@ -443,7 +430,7 @@ body {
     &__form--comment-title {
         font-weight: 500;
         font-size: $smallFont3;
-        color: #AFAFAF;
+        color: $textColor3;
         margin: 10% 0% 2%;
 
         @include tablet() {
@@ -455,12 +442,12 @@ body {
         width: 90%;
         height: 75px;
         border-radius: 5px;
-        border: 1px solid #E1E1E1;
+        border: 1px solid $elementColor3;
         padding: 1rem 0rem 0rem 1rem;
         margin: 0%;
         font-size: $smallFont4;
         color: $textColor1;
-        background-color: #FAFAFA;
+        background-color: $backgroundColor3;
         margin: 1% 0% 5%;
         font-family: 'AvenirNextLTPro';
         font-weight: 300;
@@ -472,7 +459,7 @@ body {
 
     &__form--button {
         background-color: $backgroundColor1;
-        color: #FFFFFF;
+        color: $textColor2;
         border-radius: 5px;
         width: 100%;
         border: none;
@@ -486,28 +473,28 @@ body {
     }
 
     &__form--button:hover {
-        background-color: #000;
+        background-color: $backgroundColor4;
     }
 
     &__sub-section {
         @include tablet() {
-            padding: $tabletSubSectionBreak;
+            padding: $tabletSubSectionPadding;
             width: 75%;
         }
 
         @include desktop() {
-            padding: $desktopSubSectionBreakTwo;
+            padding: $desktopSubSectionPaddingTwo;
             width: 58%;
         }
     }
 
     &__container {
-        border-top: 2px solid #E1E1E1;
+        border-top: 2px solid $elementColor3;
         display: flex;
     }
 
     &__container:nth-last-child(1) {
-        border-bottom: 2px solid #E1E1E1;
+        border-bottom: 2px solid $elementColor3;
         margin-bottom: 15%;
 
         @include tablet() {
@@ -548,7 +535,7 @@ body {
     }
 
     &__icon {
-        background-color: #F1F1F1;
+        background-color: $backgroundColor5;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -562,7 +549,7 @@ body {
 
     &__date {
         font-weight: 300;
-        color: #AFAFAF;
+        color: $textColor3;
         font-size: $smallFont4;
     }
 
@@ -581,17 +568,17 @@ body {
 /* Footer Section */
 
 .footer {
-    padding: $mobileBreakpoint;
+    padding: $mobilePadding;
     font-family: 'AvenirNextLTPro';
     background-color: $backgroundColor1;
     color: $textColor2;
 
     @include tablet() {
-        padding: $tabletBreakpoint;
+        padding: $tabletPadding;
     }
 
     @include desktop() {
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
     }
 
     &__box {
@@ -704,7 +691,7 @@ body {
 
     &__address {
         margin: 12% 0% 0%;
-        font-size: 0.75rem;
+        font-size: $smallFont1;
         font-weight: $light;
         width: 50%;
         line-height: 1rem;
@@ -725,7 +712,7 @@ body {
 
     &__area {
         margin: 12% 0% 0%;
-        font-size: 0.75rem;
+        font-size: $smallFont1;
         font-weight: $light;
         width: 42%;
         line-height: 1rem;

@@ -2,54 +2,41 @@
   font-family: "AvenirNextLTPro";
   font-weight: 100;
   font-style: normal;
-  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Light.otf");
+  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Light.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 300;
   font-style: normal;
-  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Regular.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 500;
   font-style: normal;
-  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Demi.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Bold.otf");
 }
 /* Colors */
 /* Background Colors */
 /* Text Colors */
 /* Element Colors */
-/* Margins */
-/* Padding for Breakpoints */
 /* Font */
 /* Font Weights */
 /* Font Sizes - Small */
 /* Font Sizes - Medium */
 /* Font Sizes - Large */
+/* Breakpoints */
+/* Margins */
+/* Padding for Breakpoints */
 /* General Notes 
 
-Checked for Responsiveness using Google Chrome Toogle Device Toolbar (Ctrl + Shift + M):
-
-Breakpoints: 
-
-1. 320px (Mobile) (Also the default size for anything below 320px and up to 767px)
-2. 768px (Tablet)
-3. 1280px (Desktop)
-
-All Variables can be found in _variables.scss with their respective info
-
-Most elements styled as follows:
-
-1. % for Margins and Width
-2. Rem for Font-sizes and Padding
-3. Px for Images and certain elements that are static
+Feedback from Sprint 1 not fully incorporated due to time constraint -- will be formatted in for Sprint 3!!
 
 */
 /* Partials Load-in */
@@ -213,7 +200,7 @@ body {
 @media (min-width: 768px) {
   .about-section__title {
     padding: 0rem 0.5rem;
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -576,7 +563,7 @@ body {
   }
 }
 .comment-section__icon {
-  background-color: #F1F1F1;
+  background-color: #AFAFAF;
   width: 50px;
   height: 50px;
   border-radius: 50%;

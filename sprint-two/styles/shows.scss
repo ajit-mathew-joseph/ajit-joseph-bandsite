@@ -5,8 +5,8 @@ Checked for Responsiveness using Google Chrome Toogle Device Toolbar (Ctrl + Shi
 Breakpoints: 
 
 1. 320px (Mobile) (Also the default size for anything below 320px and up to 767px)
-2. 768px (Tablet)
-3. 1280px (Desktop)
+2. $tabletBreakPoint (Tablet)
+3. $desktopBreakPoint (Desktop)
 
 All Variables can be found in _variables.scss with their respective info
 
@@ -20,19 +20,20 @@ Most elements styled as follows:
 
 /* Partials Load-in */
 
-@use '../../sprint-one/styles/partials/fonts' as *;
-@use '../../sprint-one/styles/partials/variables' as *;
+@use '../../sprint-two/styles/partials/fonts' as *;
+@use '../../sprint-two/styles/partials/variables' as *;
+@use '../../sprint-two/styles/partials/mixins' as *;
 
 /* Media Queries */ 
 
 @mixin tablet {
-    @media (min-width: 768px) {
+    @media (min-width: $tabletBreakPoint) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: 1280px) {
+    @media (min-width: $desktopBreakPoint) {
         @content;
     }
 }
@@ -69,7 +70,7 @@ body {
 
     @include desktop() {
         align-items: center;
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
     }
 
     &__logo {
@@ -132,7 +133,7 @@ body {
 /* Hero Section */ 
 
 .hero-section {
-    background-image: url('/assets/images/bandHeroImage.jpg'); // Photo by Rocco Dipoppa on Unsplash
+    background-image: url('../assets/images/neonSpace.jpg'); // Photo by Moritz Mentges on Unsplash
     background-position: center;
     background-size: cover;
     height: 410px;
@@ -145,12 +146,12 @@ body {
     }
 
     @include desktop() {
-        height: 650px;
+        height: 680px;
         align-items: flex-start;
     }
 
     &__description {
-        padding: $mobileBreakpoint;
+        padding: $mobilePadding;
         width: 90%;
         color: $textColor2;
         font-family: 'AvenirNextLTPro';
@@ -165,7 +166,7 @@ body {
         }
 
         @include desktop() {
-            padding: $desktopBreakpoint;
+            padding: $desktopPadding;
             box-sizing: border-box;
             margin: 10% 0% 2%;
         }
@@ -174,7 +175,7 @@ body {
     &__sub-section {
         @include desktop() {
             display: flex;
-            padding: $desktopBreakpoint;
+            padding: $desktopPadding;
             margin: 0%;
             justify-content: space-between;
             align-items: center;
@@ -182,11 +183,11 @@ body {
     }
 
     &__title {
-        padding: $mobileBreakpoint;
+        padding: $mobilePadding;
         width: 90%;
         color: $textColor2;
         font-family: 'AvenirNextLTPro';
-        font-size: 2.1rem;
+        font-size: $lgFont3;
         margin: 0%;
         
 
@@ -196,7 +197,7 @@ body {
         }
 
         @include desktop() {
-            font-size: 3.5rem;
+            font-size: $lgFont4;
             line-height: 5rem;
             padding: 0rem;
             width: 100%;
@@ -211,12 +212,12 @@ body {
     }
 
     &__player {
-        padding: $mobileBreakpoint;
+        padding: $mobilePadding;
         border-radius: 20px;
         margin: 10% 0% 0%;
 
         @include tablet() {
-            padding: $tabletBreakpoint;
+            padding: $tabletPadding;
             width: 60%;
             height: 150px;
             margin: 5% 0% 0%;
@@ -231,9 +232,9 @@ body {
         
     }
 
-    &__player--box {
-        font-size: 10px; 
-        color: #cccccc;
+    &__player--box { /* Left default styling as from Soundcloud */
+        font-size: $smallFont4; 
+        color: $elementColor2;
         line-break: anywhere;
         word-break: normal;
         overflow: hidden;
@@ -250,12 +251,12 @@ body {
     background-color: $backgroundColor2;
     display: flex;
     flex-direction: column;
-    padding: $mobileBreakpoint;
+    padding: $mobilePadding;
     font-family: 'AvenirNextLTPro';
     font-weight: 500;
 
     @include desktop() {
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -273,7 +274,7 @@ body {
 
     &__container {
         font-size: $smallFont4;
-        border-bottom: 2px solid #E1E1E1;
+        border-bottom: 2px solid $elementColor3;
         padding-bottom: 1rem;
         margin: 0% 0% 5%;
 
@@ -317,7 +318,7 @@ body {
     }
 
     &__date--title {
-        color: #AFAFAF;
+        color: $textColor3;
         margin: 4% 0%;
 
         @include tablet() {
@@ -337,7 +338,7 @@ body {
 
     &__venue--title {
         font-size: $smallFont4;
-        color: #AFAFAF;
+        color: $textColor3;
 
         @include tablet() {
             font-size: $smallFont4;
@@ -358,7 +359,7 @@ body {
 
     &__location--title {
         font-size: $smallFont4;
-        color: #AFAFAF;
+        color: $textColor3;
 
         @include tablet() {
             font-size: $smallFont4;
@@ -379,7 +380,7 @@ body {
 
     &__button {
         background-color: $backgroundColor1;
-        color: #FFFFFF;
+        color: $textColor2;
         border-radius: 5px;
         width: 100%;
         border: none;
@@ -392,7 +393,7 @@ body {
     }
 
     &__button:hover {
-        background-color: #000;
+        background-color: $backgroundColor4;
     }
 
     &__hidden {
@@ -405,17 +406,17 @@ body {
 /* Footer Section */
 
 .footer {
-    padding: $mobileBreakpoint;
+    padding: $mobilePadding;
     font-family: 'AvenirNextLTPro';
     background-color: $backgroundColor1;
     color: $textColor2;
 
     @include tablet() {
-        padding: $tabletBreakpoint;
+        padding: $tabletPadding;
     }
 
     @include desktop() {
-        padding: $desktopBreakpoint;
+        padding: $desktopPadding;
     }
 
     &__box {
@@ -528,7 +529,7 @@ body {
 
     &__address {
         margin: 12% 0% 0%;
-        font-size: 0.75rem;
+        font-size: $smallFont1;
         font-weight: $light;
         width: 50%;
         line-height: 1rem;
@@ -549,7 +550,7 @@ body {
 
     &__area {
         margin: 12% 0% 0%;
-        font-size: 0.75rem;
+        font-size: $smallFont1;
         font-weight: $light;
         width: 42%;
         line-height: 1rem;
