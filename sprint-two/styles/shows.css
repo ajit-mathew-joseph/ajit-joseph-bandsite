@@ -34,25 +34,6 @@
 /* Breakpoints */
 /* Margins */
 /* Padding for Breakpoints */
-/* General Notes 
-
-Checked for Responsiveness using Google Chrome Toogle Device Toolbar (Ctrl + Shift + M):
-
-Breakpoints: 
-
-1. 320px (Mobile) (Also the default size for anything below 320px and up to 767px)
-2. $tabletBreakPoint (Tablet)
-3. $desktopBreakPoint (Desktop)
-
-All Variables can be found in _variables.scss with their respective info
-
-Most elements styled as follows:
-
-1. % for Margins and Width
-2. Rem for Font-sizes and Padding
-3. Px for Images and certain elements that are static
-
-*/
 /* Partials Load-in */
 /* Media Queries */
 /* Common Elements */
@@ -295,7 +276,7 @@ body {
   font-size: 0.95rem;
   border-bottom: 2px solid #E1E1E1;
   padding-bottom: 1rem;
-  margin: 0% 0% 5%;
+  margin: 0% 0% 3%;
 }
 @media (min-width: 768px) {
   .shows-section__container {
@@ -336,12 +317,13 @@ body {
 }
 .shows-section__date--title {
   color: #AFAFAF;
-  margin: 4% 0%;
+  margin: 10% 0% 5%;
 }
 @media (min-width: 768px) {
   .shows-section__date--title {
     font-size: 0.95rem;
     width: 35%;
+    margin: 0% 0% 0%;
   }
 }
 .shows-section__date {

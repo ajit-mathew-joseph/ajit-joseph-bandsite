@@ -1,22 +1,3 @@
-/* General Notes 
-
-Checked for Responsiveness using Google Chrome Toogle Device Toolbar (Ctrl + Shift + M):
-
-Breakpoints: 
-
-1. 320px (Mobile) (Also the default size for anything below 320px and up to 767px)
-2. $tabletBreakPoint (Tablet)
-3. $desktopBreakPoint (Desktop)
-
-All Variables can be found in _variables.scss with their respective info
-
-Most elements styled as follows:
-
-1. % for Margins and Width
-2. Rem for Font-sizes and Padding
-3. Px for Images and certain elements that are static
-
-*/
 
 /* Partials Load-in */
 
@@ -276,7 +257,7 @@ body {
         font-size: $smallFont4;
         border-bottom: 2px solid $elementColor3;
         padding-bottom: 1rem;
-        margin: 0% 0% 5%;
+        margin: 0% 0% 3%;
 
         @include tablet() {
             display: flex;
@@ -319,11 +300,12 @@ body {
 
     &__date--title {
         color: $textColor3;
-        margin: 4% 0%;
+        margin: 10% 0% 5%;
 
         @include tablet() {
             font-size: $smallFont4;
             width: 35%;
+            margin: 0% 0% 0%;
         }
     }
 

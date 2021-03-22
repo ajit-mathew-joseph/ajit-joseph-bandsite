@@ -5,16 +5,7 @@ const footer = document.querySelector(".footer");
 document.body.insertBefore(createSection, footer);
 createSection.classList.add("shows-section");
 
-/* 
-
-Set of Functions:
-
-1. elementCreator takes in the element name (such as h1, div, section) and the name of the class and returns an element
-2. after seeting a variable to element creator, addInnerText takes in the variable name and adds inner text to it
-3. parentAppender takes in a parent class selector and the variable name and appends the variable (child) to the parent
-4. nodeParentAppender does the same as above, but accesses the node list to add the childen element to a given node value
-
-*/
+/* Set of Functions */
 
 function elementCreator(elementName, className) {
     let newElement = document.createElement(elementName);
