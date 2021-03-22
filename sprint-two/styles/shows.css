@@ -189,6 +189,7 @@ body {
   .hero-section__description {
     padding: 0rem 12rem 0rem 12rem;
     box-sizing: border-box;
+    margin: 10% 0% 2%;
   }
 }
 @media (min-width: 1280px) {
@@ -197,6 +198,7 @@ body {
     padding: 0rem 12rem 0rem 12rem;
     margin: 0%;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .hero-section__title {
@@ -216,7 +218,7 @@ body {
 @media (min-width: 1280px) {
   .hero-section__title {
     font-size: 3.5rem;
-    line-height: 5.5rem;
+    line-height: 5rem;
     padding: 0rem;
     width: 100%;
   }
@@ -224,7 +226,7 @@ body {
 @media (min-width: 1280px) {
   .hero-section__player-section {
     width: 70%;
-    margin: 10% 0% 0%;
+    margin: 0% 0% 0%;
   }
 }
 .hero-section__player {
@@ -235,7 +237,7 @@ body {
 @media (min-width: 768px) {
   .hero-section__player {
     padding: 0.5rem 1.2rem 0.25rem 1.2rem;
-    width: 70%;
+    width: 60%;
     height: 150px;
     margin: 5% 0% 0%;
   }
@@ -243,7 +245,7 @@ body {
 @media (min-width: 1280px) {
   .hero-section__player {
     padding: 0%;
-    margin: 0% 0% 0% 10%;
+    margin: 0% 0% 0% 15%;
     width: 100%;
     border-radius: 5px;
   }
@@ -343,6 +345,11 @@ body {
 .shows-section__date {
   font-size: 1.1rem;
 }
+@media (min-width: 768px) {
+  .shows-section__date {
+    width: 150px;
+  }
+}
 .shows-section__venue--title {
   font-size: 0.95rem;
   color: #AFAFAF;
@@ -350,7 +357,7 @@ body {
 @media (min-width: 768px) {
   .shows-section__venue--title {
     font-size: 0.95rem;
-    width: 25%;
+    width: 30%;
   }
 }
 .shows-section__venue {
@@ -361,6 +368,7 @@ body {
 @media (min-width: 768px) {
   .shows-section__venue {
     margin: 2% 0% 2%;
+    width: 120px;
   }
 }
 .shows-section__location--title {
@@ -370,7 +378,7 @@ body {
 @media (min-width: 768px) {
   .shows-section__location--title {
     font-size: 0.95rem;
-    width: 25%;
+    width: 27%;
   }
 }
 .shows-section__location {
@@ -381,6 +389,7 @@ body {
 @media (min-width: 768px) {
   .shows-section__location {
     margin: 2% 0% 2%;
+    width: 120px;
   }
 }
 .shows-section__button {
@@ -396,6 +405,9 @@ body {
   .shows-section__button {
     width: 25%;
   }
+}
+.shows-section__button:hover {
+  background-color: #000;
 }
 @media (min-width: 768px) {
   .shows-section__hidden {

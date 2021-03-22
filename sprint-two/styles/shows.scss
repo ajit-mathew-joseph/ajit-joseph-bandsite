@@ -167,6 +167,7 @@ body {
         @include desktop() {
             padding: $desktopBreakpoint;
             box-sizing: border-box;
+            margin: 10% 0% 2%;
         }
     }
 
@@ -176,6 +177,7 @@ body {
             padding: $desktopBreakpoint;
             margin: 0%;
             justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -195,7 +197,7 @@ body {
 
         @include desktop() {
             font-size: 3.5rem;
-            line-height: 5.5rem;
+            line-height: 5rem;
             padding: 0rem;
             width: 100%;
         }
@@ -204,7 +206,7 @@ body {
     &__player-section {
         @include desktop() {
             width: 70%;
-            margin: 10% 0% 0%;
+            margin: 0% 0% 0%;
         }
     }
 
@@ -215,14 +217,14 @@ body {
 
         @include tablet() {
             padding: $tabletBreakpoint;
-            width: 70%;
+            width: 60%;
             height: 150px;
             margin: 5% 0% 0%;
         }
 
         @include desktop() {
             padding: 0%;
-            margin: 0% 0% 0% 10%;
+            margin: 0% 0% 0% 15%;
             width: 100%;
             border-radius: 5px;
         }
@@ -326,6 +328,11 @@ body {
 
     &__date {
         font-size: $medFont1;
+
+        @include tablet() {
+            width: 150px;
+        }
+        
     }
 
     &__venue--title {
@@ -334,7 +341,7 @@ body {
 
         @include tablet() {
             font-size: $smallFont4;
-            width: 25%;
+            width: 30%;
         }
     }
 
@@ -345,6 +352,7 @@ body {
         
         @include tablet() {
             margin: 2% 0% 2%;
+            width: 120px;
         }
     }
 
@@ -354,7 +362,7 @@ body {
 
         @include tablet() {
             font-size: $smallFont4;
-            width: 25%;
+            width: 27%;
         }
     }
 
@@ -365,6 +373,7 @@ body {
 
         @include tablet() {
             margin: 2% 0% 2%;
+            width: 120px;
         }
     }
 
@@ -380,6 +389,10 @@ body {
         @include tablet() {
             width: 25%;
         }
+    }
+
+    &__button:hover {
+        background-color: #000;
     }
 
     &__hidden {

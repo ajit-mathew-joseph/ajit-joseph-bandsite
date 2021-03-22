@@ -378,7 +378,7 @@ body {
             margin: 2% 0% 3%;
         }
 
-        @include tablet() {
+        @include desktop() {
             padding: $desktopSubSectionBreakTwo;
             width: 60%;
 
@@ -428,12 +428,16 @@ body {
         width: 90%;
         height: 45px;
         border-radius: 5px;
-        border: 2px solid black;
+        border: 1px solid #E1E1E1;
         padding: 0rem 0rem 0rem 1rem;
         margin: 0%;
         font-size: $smallFont4;
         color: $textColor1;
         background-color: #FAFAFA;
+    }
+
+    &__form--name-input:focus {
+        border: 2px solid black;    
     }
 
     &__form--comment-title {
@@ -462,6 +466,10 @@ body {
         font-weight: 300;
     }
 
+    &__form--comment-input:focus {
+        border: 2px solid black;    
+    }
+
     &__form--button {
         background-color: $backgroundColor1;
         color: #FFFFFF;
@@ -475,6 +483,10 @@ body {
             width: 35%;
             margin: 0% 0% 0% 58%;
         }
+    }
+
+    &__form--button:hover {
+        background-color: #000;
     }
 
     &__sub-section {
