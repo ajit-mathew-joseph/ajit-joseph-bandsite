@@ -1,0 +1,575 @@
+
+/* Partials Load-in */
+
+@use '../../sprint-two/styles/partials/fonts' as *;
+@use '../../sprint-two/styles/partials/variables' as *;
+@use '../../sprint-two/styles/partials/mixins' as *;
+
+/* Media Queries */ 
+
+@mixin tablet {
+    @media (min-width: $tabletBreakPoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktopBreakPoint) {
+        @content;
+    }
+}
+
+/* Common Elements */ 
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+}
+
+/* Navigation Bar */
+
+.header {
+    width: 100%;
+}
+
+.nav-bar {
+    background-color: $backgroundColor1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet() {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 2rem;
+    }
+
+    @include desktop() {
+        align-items: center;
+        padding: $desktopPadding;
+    }
+
+    &__logo {
+        margin: 5% 0% 2%;
+        width: 35%;
+
+        @include tablet() {
+            margin: 2% 5% 2% 0%;
+            width: 15%;
+        }
+
+         @include desktop() {
+            width: 11%;
+        }
+    }
+
+    &__links {
+        width: 100%;
+        margin: 1% 0% 0%;
+        padding: 0rem;
+        display: flex;
+        text-align: center;
+        color: $textColor2;
+
+        @include tablet() {
+            width: 35%;
+            margin: 2% 0% 0%;
+        }
+
+        @include desktop() {
+            width: 20%;
+            margin: 1% 0% 0%;
+        }
+    }
+
+    &__link {
+        font-family: 'AvenirNextLTPro';
+        font-weight: $normal;
+        padding: 0.33rem 1rem;
+        width: 50%;
+        color: $textColor3;
+
+        @include tablet() {
+            width: 100%;
+            padding: 1.5rem 0rem;
+            margin: 0% 10% 0%;
+        }
+
+        @include desktop() {
+            margin: 0% 15% 0%;
+        }
+    }   
+
+    &__link--active {
+        border-bottom: 5px solid $elementColor1;
+        color: $textColor2;
+    }
+}
+
+/* Hero Section */ 
+
+.hero-section {
+    background-image: url('../assets/images/neonSpace.jpg'); // Photo by Moritz Mentges on Unsplash
+    background-position: center;
+    background-size: cover;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet() {
+        height: 675px;
+    }
+
+    @include desktop() {
+        height: 680px;
+        align-items: flex-start;
+    }
+
+    &__description {
+        padding: $mobilePadding;
+        width: 90%;
+        color: $textColor2;
+        font-family: 'AvenirNextLTPro';
+        font-size: $smallFont2;
+        font-weight: 300;
+        margin: 10% 0% 0%;
+
+        @include tablet() {
+            font-size: $medFont3;
+            font-weight: 500;
+            margin: 10% 0% 3%;
+        }
+
+        @include desktop() {
+            padding: $desktopPadding;
+            box-sizing: border-box;
+            margin: 10% 0% 2%;
+        }
+    }
+
+    &__sub-section {
+        @include desktop() {
+            display: flex;
+            padding: $desktopPadding;
+            margin: 0%;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        padding: $mobilePadding;
+        width: 90%;
+        color: $textColor2;
+        font-family: 'AvenirNextLTPro';
+        font-size: $lgFont3;
+        margin: 0%;
+        
+
+        @include tablet() {
+            font-size: $lgFont2;
+            width: 80%;
+        }
+
+        @include desktop() {
+            font-size: $lgFont4;
+            line-height: 5rem;
+            padding: 0rem;
+            width: 100%;
+        }
+    }
+
+    &__player-section {
+        @include desktop() {
+            width: 70%;
+            margin: 0% 0% 0%;
+        }
+    }
+
+    &__player {
+        padding: $mobilePadding;
+        border-radius: 20px;
+        margin: 10% 0% 0%;
+
+        @include tablet() {
+            padding: $tabletPadding;
+            width: 60%;
+            height: 150px;
+            margin: 5% 0% 0%;
+        }
+
+        @include desktop() {
+            padding: 0%;
+            margin: 0% 0% 0% 15%;
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+    }
+
+    &__player--box { /* Left default styling as from Soundcloud */
+        font-size: $smallFont4; 
+        color: $elementColor2;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+        font-weight: 100;
+    }
+}
+
+/* Shows Section */ 
+
+.shows-section {
+    background-color: $backgroundColor2;
+    display: flex;
+    flex-direction: column;
+    padding: $mobilePadding;
+    font-family: 'AvenirNextLTPro';
+    font-weight: 500;
+
+    @include desktop() {
+        padding: $desktopPadding;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: $medFont3;
+        margin: 10% 0% 7.5%;
+        
+        @include tablet() {
+            margin: 5% 0% 1%;
+            font-size: $lgFont1;
+        }
+    }
+
+    &__container {
+        font-size: $smallFont4;
+        border-bottom: 2px solid $elementColor3;
+        padding-bottom: 1rem;
+        margin: 0% 0% 3%;
+
+        @include tablet() {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__listing-section {
+        @include desktop() {
+            width: 70%;
+            margin: 2% 0% 0%;
+        }
+    }
+
+    &__container--alternate {
+        display: none;
+
+        @include tablet() {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__empty-container {
+        @include tablet() {
+            margin: 0%;
+            width: 35%;
+        }   
+    }
+
+    &__container:nth-last-child(1) {
+        margin: 0% 0% 12%;
+
+        @include tablet() {
+            margin: 0% 0% 5%;
+        }
+    }
+
+    &__date--title {
+        color: $textColor3;
+        margin: 10% 0% 5%;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 35%;
+            margin: 0% 0% 0%;
+        }
+    }
+
+    &__date {
+        font-size: $medFont1;
+
+        @include tablet() {
+            width: 150px;
+        }
+        
+    }
+
+    &__venue--title {
+        font-size: $smallFont4;
+        color: $textColor3;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 30%;
+        }
+    }
+
+    &__venue {
+        font-size: $smallFont3;
+        font-weight: 100;
+        margin: 2% 0% 7%;
+        
+        @include tablet() {
+            margin: 2% 0% 2%;
+            width: 120px;
+        }
+    }
+
+    &__location--title {
+        font-size: $smallFont4;
+        color: $textColor3;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            width: 27%;
+        }
+    }
+
+    &__location {
+        font-size: $smallFont3;
+        font-weight: 100;
+        margin: 2% 0% 7%;
+
+        @include tablet() {
+            margin: 2% 0% 2%;
+            width: 120px;
+        }
+    }
+
+    &__button {
+        background-color: $backgroundColor1;
+        color: $textColor2;
+        border-radius: 5px;
+        width: 100%;
+        border: none;
+        height: 50px;
+        font-weight: 700;
+
+        @include tablet() {
+            width: 25%;
+        }
+    }
+
+    &__button:hover {
+        background-color: $backgroundColor4;
+    }
+
+    &__hidden {
+        @include tablet() {
+            display: none;
+        }
+    }
+}
+
+/* Footer Section */
+
+.footer {
+    padding: $mobilePadding;
+    font-family: 'AvenirNextLTPro';
+    background-color: $backgroundColor1;
+    color: $textColor2;
+
+    @include tablet() {
+        padding: $tabletPadding;
+    }
+
+    @include desktop() {
+        padding: $desktopPadding;
+    }
+
+    &__box {
+        @include tablet() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: $lgFont1;
+        @include tablet() {
+            margin: 5% 0% 2%;
+        }
+    }   
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+        margin: 3% 0% 15%;
+
+        @include tablet() {
+            width: 18%;
+            margin: 3% 22% 0% 0%;
+        }
+
+        @include desktop() {
+            width: 16%;
+            margin: 3% 27% 0% 0%;
+        }
+    }
+
+    &__logo {
+        display: none;
+        @include tablet() {
+            display: inline-block;
+            margin: 3% 0% 0%;
+        }
+
+        @include desktop() {
+            margin: 3% 3% 0%;
+        }
+    }
+}
+
+/* Contact Information Section */ 
+
+.contact-information__section {
+    @include tablet() {
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    @include desktop() {
+        justify-content: flex-start;
+    }
+}
+
+.contact-information {
+    @include tablet() {
+        width: 30%;
+        margin: 0% 5% 0% 0%;
+    }
+
+    @include desktop() {
+        margin: 0% 8% 0% 0%;
+        width: 25%;
+    }
+
+
+.contact-information:nth-child(3) {
+    @include tablet() {
+        margin: 0% 0% 0% 2%;
+    }
+}
+
+.contact-information:nth-child(2) {
+    @include tablet() {
+        margin: 0%;
+    }
+
+    @include desktop() {
+        margin: 0% 3% 0% 0%;
+    }
+}
+
+    &__name {
+        height: 0rem;
+        font-size: $smallFont3;
+        font-weight: $normal;
+        @include tablet() {
+            font-size: $smallFont4;
+            margin-bottom: 8%;
+        }
+    }
+
+    &__agency {
+        height: 0rem;
+        font-size: $smallFont3;
+        font-weight: $normal;
+
+        @include tablet() {
+            font-size: $smallFont4;
+            margin: 0% 0% 15%
+        }
+    }
+
+    &__address {
+        margin: 12% 0% 0%;
+        font-size: $smallFont1;
+        font-weight: $light;
+        width: 50%;
+        line-height: 1rem;
+        color: $textColor3;
+
+        @include tablet {
+            width: 80%;
+            font-size: $smallFont2;
+        }
+    }
+
+    &__email {
+        font-size: $smallFont1;
+        font-weight: $light;
+        margin: 7% 0% 0%;
+        color: $textColor3;
+    }
+
+    &__area {
+        margin: 12% 0% 0%;
+        font-size: $smallFont1;
+        font-weight: $light;
+        width: 42%;
+        line-height: 1rem;
+        color: $textColor3;
+
+        @include tablet() {
+            font-size: $smallFont2;
+            width: 70%;
+        }
+    }
+
+    &__area:nth-last-child(2) {
+        margin: 0%;
+        width: 100%;
+    }
+}
+
+/* Copyright Section */
+
+.copyright {
+    margin: 10% 0% 0%;
+    font-size: $smallFont1;
+    font-weight: $light;
+    line-height: 1rem;
+    padding: 0rem 0rem 2rem 0rem;
+    color: $textColor3;
+    
+    @include tablet() {
+        display: flex;
+        margin: 4% 0% 0%;
+    }
+
+    @include desktop() {
+        margin: 3% 0% 0%;
+    }
+
+    &__text {
+        margin: 0% 1% 0% 0%;
+    }
+}

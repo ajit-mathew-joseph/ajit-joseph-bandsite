@@ -109,7 +109,6 @@ function formSubmit(event) {
     let date = new Date().toLocaleDateString();
     
     ObjPush(commentArray, name, date, comment);
-    console.log(commentArray);
 
     removeComments();
 
@@ -118,30 +117,6 @@ function formSubmit(event) {
     }
 
     document.querySelector(".comment-section__form").reset();
-    // commentArray.shift(); 
 }
 
 form.addEventListener('submit', formSubmit);
-
-/* Functions Explanations 
-
-1. elementCreator = creates and returns an element given an element name (in brackets -- "p", "div") and class name (also in brackets)
-
-2. addInnerText = adds innerText. Requires the elementCreator to be set to a variable, and the variable to be passed into the function
-(along with the text value)
-
-3. parentAppend = adds an element with nodeList = 0 to a parent element
-
-4. nodeParentAppend = adds an element with nodeList > 1 to a a parent element
-
-5. displayComment = since all the comments on the site are following the same structure, the display comment function has a default 
-DOM structure laid out for comments. It then takes the index values of the associated comments from commentArray and passes it 
-into the innerText of the created DOM elements. 
-
-6. ObjPush = pushes a comment object into the start of the CommentArray (this is used to then create the displayed comments)
-
-7. removeComments = removes all comments from the DOM so that they can be re-initalized appropriately
-
-8. formSubmit = when button is clicked it cycles through all the above commands in order and finally it resets the form input
-
-*/
