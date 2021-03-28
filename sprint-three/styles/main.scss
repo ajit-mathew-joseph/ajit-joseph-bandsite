@@ -24,6 +24,10 @@ Feedback from Sprint 1 not fully incorporated due to time constraint -- will be 
     }
 }
 
+/* Import Global Stylesheet */
+
+@import url("./global.css");
+
 /* Common Elements */ 
 
 ul {
@@ -36,85 +40,94 @@ body {
 
 /* Navigation Bar */
 
-.header {
-    width: 100%;
-}
+// .header {
+//     width: 100%;
+// }
 
-.nav-bar {
-    background-color: $backgroundColor1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+// .nav-bar {
+//     background-color: $backgroundColor1;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
 
-    @include tablet() {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0rem 2rem;
-    }
+//     @include tablet() {
+//         flex-direction: row;
+//         justify-content: flex-start;
+//         align-items: center;
+//         padding: 0rem 2rem;
+//     }
 
-    @include desktop() {
-        align-items: center;
-        padding: $desktopPadding;
-    }
+//     @include desktop() {
+//         align-items: center;
+//         padding: $desktopPadding;
+//     }
 
-    &__logo {
-        margin: 5% 0% 2%;
-        width: 35%;
+//     &__logo {
+        
+//         // width: 35%;
 
-        @include tablet() {
-            margin: 2% 5% 2% 0%;
-            width: 15%;
-        }
+//         @include tablet() {
+//             margin: 2% 5% 2% 0%;
+//             width: 110%;
+//         }
 
-         @include desktop() {
-            width: 11%;
-        }
-    }
+//          @include desktop() {
+//             width: 120%;
+//         }
+//     }
 
-    &__links {
-        width: 100%;
-        margin: 1% 0% 0%;
-        padding: 0rem;
-        display: flex;
-        text-align: center;
-        color: $textColor2;
+//     &__logo--link {
+//         margin: 5% 0% 2%;
 
-        @include tablet() {
-            width: 35%;
-            margin: 2% 0% 0%;
-        }
+//         @include tablet() {
+//             margin: 2% 5% 2% 0%;
+//         }
+//     }
 
-        @include desktop() {
-            width: 20%;
-            margin: 1% 0% 0%;
-        }
-    }
+//     &__links {
+//         width: 100%;
+//         margin: 1% 0% 0%;
+//         padding: 0rem;
+//         display: flex;
+//         text-align: center;
+//         color: $textColor2;
 
-    &__link {
-        font-family: 'AvenirNextLTPro';
-        font-weight: $normal;
-        padding: 0.33rem 1rem;
-        width: 50%;
-        color: $textColor3;
+//         @include tablet() {
+//             width: 35%;
+//             margin: 2% 0% 0%;
+//         }
 
-        @include tablet() {
-            width: 100%;
-            padding: 1.5rem 0rem;
-            margin: 0% 10% 0%;
-        }
+//         @include desktop() {
+//             width: 20%;
+//             margin: 1% 0% 0%;
+//         }
+//     }
 
-        @include desktop() {
-            margin: 0% 15% 0%;
-        }
-    }   
+//     &__link {
+//         font-family: 'AvenirNextLTPro';
+//         font-weight: $normal;
+//         padding: 0.33rem 1rem;
+//         width: 50%;
+//         color: $textColor3;
+//         text-decoration: none;
 
-    &__link--active {
-        border-bottom: 5px solid $elementColor1;
-        color: $textColor2;
-    }
-}    
+//         @include tablet() {
+//             width: 100%;
+//             padding: 1.5rem 0rem;
+//             margin: 0% 10% 0%;
+//         }
+
+//         @include desktop() {
+//             margin: 0% 15% 0%;
+//         }
+//     }
+    
+//     &__link--active {
+//         border-bottom: 5px solid $elementColor1;
+//         color: $textColor2;
+//     }
+// }
 
 /* Hero Section */ 
 
@@ -132,8 +145,8 @@ body {
     }
 
     @include desktop() {
-        height: 650px;
-        align-items: flex-start;
+        height: 700px;
+        // align-items: flex-start;
     }
 
     &__title {
@@ -150,7 +163,7 @@ body {
         @include desktop() {
             padding: $desktopPadding;
             width: 45%;
-            margin: 16% 0% 0%;
+            margin: 0%; /* previously 16% 0% 0%; */
             line-height: 5.5rem;
         }
     }
@@ -565,191 +578,192 @@ body {
     }
 }
 
+
 /* Footer Section */
 
-.footer {
-    padding: $mobilePadding;
-    font-family: 'AvenirNextLTPro';
-    background-color: $backgroundColor1;
-    color: $textColor2;
+// .footer {
+//     padding: $mobilePadding;
+//     font-family: 'AvenirNextLTPro';
+//     background-color: $backgroundColor1;
+//     color: $textColor2;
 
-    @include tablet() {
-        padding: $tabletPadding;
-    }
+//     @include tablet() {
+//         padding: $tabletPadding;
+//     }
 
-    @include desktop() {
-        padding: $desktopPadding;
-    }
+//     @include desktop() {
+//         padding: $desktopPadding;
+//     }
 
-    &__box {
-        @include tablet() {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
-    }
+//     &__box {
+//         @include tablet() {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         }
+//     }
 
-    &__title {
-        font-size: $lgFont1;
-        @include tablet() {
-            margin: 5% 0% 2%;
-        }
-    }   
+//     &__title {
+//         font-size: $lgFont1;
+//         @include tablet() {
+//             margin: 5% 0% 2%;
+//         }
+//     }   
 
-    &__icons {
-        display: flex;
-        justify-content: space-between;
-        width: 45%;
-        margin: 3% 0% 15%;
+//     &__icons {
+//         display: flex;
+//         justify-content: space-between;
+//         width: 45%;
+//         margin: 3% 0% 15%;
 
-        @include tablet() {
-            width: 18%;
-            margin: 3% 22% 0% 0%;
-        }
+//         @include tablet() {
+//             width: 18%;
+//             margin: 3% 22% 0% 0%;
+//         }
 
-        @include desktop() {
-            width: 16%;
-            margin: 3% 27% 0% 0%;
-        }
-    }
+//         @include desktop() {
+//             width: 16%;
+//             margin: 3% 27% 0% 0%;
+//         }
+//     }
 
-    &__logo {
-        display: none;
-        @include tablet() {
-            display: inline-block;
-            margin: 3% 0% 0%;
-        }
+//     &__logo {
+//         display: none;
+//         @include tablet() {
+//             display: inline-block;
+//             margin: 3% 0% 0%;
+//         }
 
-        @include desktop() {
-            margin: 3% 3% 0%;
-        }
-    }
-}
+//         @include desktop() {
+//             margin: 3% 3% 0%;
+//         }
+//     }
+// }
 
-/* Contact Information Section */ 
+// /* Contact Information Section */ 
 
-.contact-information__section {
-    @include tablet() {
-        display: flex;
-        justify-content: left;
-        align-items: flex-start;
-    }
+// .contact-information__section {
+//     @include tablet() {
+//         display: flex;
+//         justify-content: left;
+//         align-items: flex-start;
+//     }
 
-    @include desktop() {
-        justify-content: flex-start;
-    }
-}
+//     @include desktop() {
+//         justify-content: flex-start;
+//     }
+// }
 
-.contact-information {
-    @include tablet() {
-        width: 30%;
-        margin: 0% 5% 0% 0%;
-    }
+// .contact-information {
+//     @include tablet() {
+//         width: 30%;
+//         margin: 0% 5% 0% 0%;
+//     }
 
-    @include desktop() {
-        margin: 0% 8% 0% 0%;
-        width: 25%;
-    }
+//     @include desktop() {
+//         margin: 0% 8% 0% 0%;
+//         width: 25%;
+//     }
 
 
-.contact-information:nth-child(3) {
-    @include tablet() {
-        margin: 0% 0% 0% 2%;
-    }
-}
+// .contact-information:nth-child(3) {
+//     @include tablet() {
+//         margin: 0% 0% 0% 2%;
+//     }
+// }
 
-.contact-information:nth-child(2) {
-    @include tablet() {
-        margin: 0%;
-    }
+// .contact-information:nth-child(2) {
+//     @include tablet() {
+//         margin: 0%;
+//     }
 
-    @include desktop() {
-        margin: 0% 3% 0% 0%;
-    }
-}
+//     @include desktop() {
+//         margin: 0% 3% 0% 0%;
+//     }
+// }
 
-    &__name {
-        height: 0rem;
-        font-size: $smallFont3;
-        font-weight: $normal;
-        @include tablet() {
-            font-size: $smallFont4;
-            margin-bottom: 8%;
-        }
-    }
+//     &__name {
+//         height: 0rem;
+//         font-size: $smallFont3;
+//         font-weight: $normal;
+//         @include tablet() {
+//             font-size: $smallFont4;
+//             margin-bottom: 8%;
+//         }
+//     }
 
-    &__agency {
-        height: 0rem;
-        font-size: $smallFont3;
-        font-weight: $normal;
+//     &__agency {
+//         height: 0rem;
+//         font-size: $smallFont3;
+//         font-weight: $normal;
 
-        @include tablet() {
-            font-size: $smallFont4;
-            margin: 0% 0% 15%
-        }
-    }
+//         @include tablet() {
+//             font-size: $smallFont4;
+//             margin: 0% 0% 15%
+//         }
+//     }
 
-    &__address {
-        margin: 12% 0% 0%;
-        font-size: $smallFont1;
-        font-weight: $light;
-        width: 50%;
-        line-height: 1rem;
-        color: $textColor3;
+//     &__address {
+//         margin: 12% 0% 0%;
+//         font-size: $smallFont1;
+//         font-weight: $light;
+//         width: 50%;
+//         line-height: 1rem;
+//         color: $textColor3;
 
-        @include tablet {
-            width: 80%;
-            font-size: $smallFont2;
-        }
-    }
+//         @include tablet {
+//             width: 80%;
+//             font-size: $smallFont2;
+//         }
+//     }
 
-    &__email {
-        font-size: $smallFont1;
-        font-weight: $light;
-        margin: 7% 0% 0%;
-        color: $textColor3;
-    }
+//     &__email {
+//         font-size: $smallFont1;
+//         font-weight: $light;
+//         margin: 7% 0% 0%;
+//         color: $textColor3;
+//     }
 
-    &__area {
-        margin: 12% 0% 0%;
-        font-size: $smallFont1;
-        font-weight: $light;
-        width: 42%;
-        line-height: 1rem;
-        color: $textColor3;
+//     &__area {
+//         margin: 12% 0% 0%;
+//         font-size: $smallFont1;
+//         font-weight: $light;
+//         width: 42%;
+//         line-height: 1rem;
+//         color: $textColor3;
 
-        @include tablet() {
-            font-size: $smallFont2;
-            width: 70%;
-        }
-    }
+//         @include tablet() {
+//             font-size: $smallFont2;
+//             width: 70%;
+//         }
+//     }
 
-    &__area:nth-last-child(2) {
-        margin: 0%;
-        width: 100%;
-    }
-}
+//     &__area:nth-last-child(2) {
+//         margin: 0%;
+//         width: 100%;
+//     }
+// }
 
-/* Copyright Section */
+// /* Copyright Section */
 
-.copyright {
-    margin: 10% 0% 0%;
-    font-size: $smallFont1;
-    font-weight: $light;
-    line-height: 1rem;
-    padding: 0rem 0rem 2rem 0rem;
-    color: $textColor3;
+// .copyright {
+//     margin: 10% 0% 0%;
+//     font-size: $smallFont1;
+//     font-weight: $light;
+//     line-height: 1rem;
+//     padding: 0rem 0rem 2rem 0rem;
+//     color: $textColor3;
     
-    @include tablet() {
-        display: flex;
-        margin: 4% 0% 0%;
-    }
+//     @include tablet() {
+//         display: flex;
+//         margin: 4% 0% 0%;
+//     }
 
-    @include desktop() {
-        margin: 3% 0% 0%;
-    }
+//     @include desktop() {
+//         margin: 3% 0% 0%;
+//     }
 
-    &__text {
-        margin: 0% 1% 0% 0%;
-    }
-}
+//     &__text {
+//         margin: 0% 1% 0% 0%;
+//     }
+// }
