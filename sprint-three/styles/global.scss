@@ -1,3 +1,6 @@
+/* Troubleshooting -- SCSS is a bit finnicky, and sometimes it will show a white border. If this happens click Ctrl + S in VS 
+code -- fixes the issue */
+
 /* Partials Load-in */
 
 @use '../../sprint-three/styles/partials/fonts' as *;
@@ -189,7 +192,7 @@
     }
 
     @include desktop() {
-        margin: 0% 8% 0% 0%;
+        margin: 0% 6% 0% 0%;
         width: 25%;
     }
 
@@ -241,6 +244,11 @@
 
         @include tablet {
             width: 80%;
+            font-size: $smallFont2;
+        }
+
+        @include desktop {
+            width: 70%;
             font-size: $smallFont2;
         }
     }

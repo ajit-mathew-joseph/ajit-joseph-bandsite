@@ -1,8 +1,3 @@
-/* General Notes 
-
-Feedback from Sprint 1 not fully incorporated due to time constraint -- will be formatted in for Sprint 3!!
-
-*/
 /* Partials Load-in */
 /* Media Queries */
 /* Import Global Stylesheet */
@@ -11,25 +6,25 @@ Feedback from Sprint 1 not fully incorporated due to time constraint -- will be 
   font-family: "AvenirNextLTPro";
   font-weight: 100;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Light.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Light.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 300;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 500;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 700;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2");
 }
 /* Colors */
 /* Background Colors */

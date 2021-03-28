@@ -2,25 +2,25 @@
   font-family: "AvenirNextLTPro";
   font-weight: 100;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Light.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Light.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 300;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 500;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 700;
   font-style: normal;
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2");
 }
 /* Colors */
 /* Background Colors */
@@ -34,6 +34,8 @@
 /* Breakpoints */
 /* Margins */
 /* Padding for Breakpoints */
+/* Troubleshooting -- SCSS is a bit finnicky, and sometimes it will show a white border. If this happens click Ctrl + S in VS 
+code -- fixes the issue */
 /* Partials Load-in */
 /* Media Queries */
 /* Navigation Bar */
@@ -213,7 +215,7 @@
 }
 @media (min-width: 1280px) {
   .contact-information {
-    margin: 0% 8% 0% 0%;
+    margin: 0% 6% 0% 0%;
     width: 25%;
   }
 }
@@ -265,6 +267,12 @@
 @media (min-width: 768px) {
   .contact-information__address {
     width: 80%;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-information__address {
+    width: 70%;
     font-size: 0.8rem;
   }
 }
