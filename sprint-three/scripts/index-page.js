@@ -108,10 +108,8 @@ commentQuery.then(request => {
         let comment = event.target.commentInput.value;
         let date = new Date().toLocaleDateString();
         let likes = 0;
-        let id = 0;
-        let timestamp = new Date().getTime();
     
-        ObjPush(commentArray, name, date, comment, likes, id, timestamp);
+        ObjPush(commentArray, name, date, comment, likes);
 
         axios
             .post(api_url + comment_url + auth, {

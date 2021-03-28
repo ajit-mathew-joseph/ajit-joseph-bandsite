@@ -6,25 +6,25 @@
   font-family: "AvenirNextLTPro";
   font-weight: 100;
   font-style: normal;
-  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Light.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Light.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 300;
   font-style: normal;
-  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 500;
   font-style: normal;
-  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
 }
 @font-face {
   font-family: "AvenirNextLTPro";
   font-weight: 700;
   font-style: normal;
-  src: url("../../assets/fonts/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 /* Colors */
 /* Background Colors */
@@ -47,7 +47,6 @@ body {
   margin: 0;
 }
 
-/* Navigation Bar */
 /* Hero Section */
 .hero-section {
   background-image: url("../assets/images/neonSpace.jpg");
@@ -315,6 +314,4 @@ body {
   .shows-section__hidden {
     display: none;
   }
-}
-
-/* Footer Section *//*# sourceMappingURL=shows.css.map */
+}/*# sourceMappingURL=shows.css.map */
